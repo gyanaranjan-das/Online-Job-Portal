@@ -1,4 +1,4 @@
-package com.jobportal.dao;
+package com.jobportal.DAO;
 
 import com.jobportal.model.User;
 import com.jobportal.util.DatabaseConnection;
