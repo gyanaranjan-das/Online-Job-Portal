@@ -60,4 +60,28 @@ public class JobDAO {
         }
         return jobs;
     }
+    public List<Job> getAllJobs(){
+        List<Job> jobs = new ArrayList<>();
+        String sql = "SELECT * FROM jobs ORDER BY posted_at DESC";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Job job = new Job();
+                job.setJobId(rs.getInt("job_id"));
+                job.setRecruiterId(rs.getInt("recruiter_id"));
+                job.setTitle(rs.getString("title"));
+                job.setDescription(rs.getString("description"));
+                job.setLocation(rs.getString("location"));
+                job.setPostedAt(rs.getTimestamp("posted_at"));
+                jobs.add(job);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobs;
+    }
 }

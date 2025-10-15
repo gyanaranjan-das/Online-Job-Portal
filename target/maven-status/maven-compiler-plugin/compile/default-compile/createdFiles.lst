@@ -1,0 +1,9 @@
+com/jobportal/util/DatabaseConnection.class
+com/jobportal/servlet/LogoutServlet.class
+com/jobportal/DAO/UserDAO.class
+com/jobportal/Servlet/AddJobServlet.class
+com/jobportal/Servlet/LoginServlet.class
+com/jobportal/model/Job.class
+com/jobportal/model/User.class
+com/jobportal/Servlet/RegisterServlet.class
+com/jobportal/DAO/JobDAO.class
