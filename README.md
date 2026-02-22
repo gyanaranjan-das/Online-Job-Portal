@@ -40,13 +40,13 @@ The app follows a simple **DOM-driven architecture** — the DOM is the single s
 ```
 ┌──────────────────────────────────────────────────┐
 │                   index.html                     │
-│  ┌──────────┐  ┌──────────────┐  ┌───────────┐  │
-│  │  To Do   │  │ In Progress  │  │   Done     │  │
-│  │ (column) │  │  (column)    │  │  (column)  │  │
-│  │          │  │              │  │            │  │
-│  │  [task]  │  │   [task]     │  │  [task]    │  │
-│  │  [task]  │  │              │  │            │  │
-│  └──────────┘  └──────────────┘  └───────────┘  │
+│  ┌──────────┐  ┌──────────────┐  ┌───────────┐   │
+│  │  To Do   │  │ In Progress  │  │   Done    │   │
+│  │ (column) │  │  (column)    │  │  (column) │   │
+│  │          │  │              │  │           │   │
+│  │  [task]  │  │   [task]     │  │  [task]   │   │
+│  │  [task]  │  │              │  │           │   │
+│  └──────────┘  └──────────────┘  └───────────┘   │
 │                                                  │
 │  ┌────────────────────────────────────────────┐  │
 │  │  Modal (hidden by default)                 │  │
@@ -68,7 +68,7 @@ The app follows a simple **DOM-driven architecture** — the DOM is the single s
 │      localStorage                                │
 │                                                  │
 │  addDragEventsOnColumn(column)                   │
-│    → dragenter / dragleave / dragover / drop      │
+│    → dragenter / dragleave / dragover / drop     │
 │                                                  │
 │  Modal toggle / background-click-to-close        │
 │  Add-task handler (validate → create → save)     │
